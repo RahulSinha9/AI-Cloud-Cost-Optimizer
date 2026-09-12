@@ -1,0 +1,40 @@
+[project]
+name = "ai-cloud-cost-optimizer"
+version = "0.1.0"
+description = "Production-oriented AWS cost anomaly detection and AI-assisted optimization API"
+requires-python = ">=3.11"
+dependencies = [
+  "fastapi>=0.115,<1",
+  "uvicorn[standard]>=0.34,<1",
+  "pydantic>=2.10,<3",
+  "pydantic-settings>=2.7,<3",
+  "boto3>=1.35,<2",
+  "httpx>=0.28,<1",
+  "prometheus-client>=0.21,<1",
+]
+
+[project.optional-dependencies]
+test = [
+  "ruff>=0.9,<1",
+  "pytest>=8.3,<9",
+  "pytest-cov>=6,<7",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q --disable-warnings --strict-config"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.coverage.run]
+source = ["app"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true
