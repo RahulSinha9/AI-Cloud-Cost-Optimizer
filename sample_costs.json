@@ -1,0 +1,12 @@
+{
+  "monthly_budget": 300,
+  "context": "Example production account with recent autoscaling changes",
+  "points": [
+    {"date": "2026-08-01", "amount": 8.4, "service": "Amazon EC2", "account": "prod"},
+    {"date": "2026-08-02", "amount": 9.2, "service": "Amazon EC2", "account": "prod"},
+    {"date": "2026-08-03", "amount": 8.9, "service": "Amazon EC2", "account": "prod"},
+    {"date": "2026-08-04", "amount": 10.1, "service": "Amazon EC2", "account": "prod"},
+    {"date": "2026-08-05", "amount": 31.5, "service": "Amazon EC2", "account": "prod"},
+    {"date": "2026-08-06", "amount": 9.5, "service": "Amazon EC2", "account": "prod"}
+  ]
+}
