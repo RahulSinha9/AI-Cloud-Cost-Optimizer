@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: dev
+      LOG_LEVEL: INFO
+      ANOMALY_Z_THRESHOLD: 2.5
+      AI_ENABLED: "false"
+    restart: unless-stopped
